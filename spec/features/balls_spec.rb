@@ -7,5 +7,9 @@ describe "ball creation spec", js: :true, type: :feature do
     click_button "Create Ball"
     expect(page).to have_content("Ball was successfully created.")
   end
+
+  it 'failed test' do
+    raise "failed"
+  end
   
 end
