@@ -1,3 +1,4 @@
 # answer-drift
 
-Using for different CI systems
+Using for Snip.IO
+Only for mobile :( 
