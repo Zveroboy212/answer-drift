@@ -4,6 +4,8 @@ rvm:
 env:
   - CI_REPORTS=shippable/testresults COVERAGE_REPORTS=shippable/codecoverage
 # ensure the test output and coverage dirs are created
+before_install:
+  - rvm rvmrc trust .
 before_script:
   - mkdir -p shippable/testresults
 # write the rspec tests to the output dir
