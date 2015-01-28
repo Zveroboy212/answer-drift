@@ -1,4 +1,5 @@
-describe "ball creation spec", js: :true, type: :feature do
+require 'watir-webdriver'
+describe "ball creation spec", js: :true do
   it 'succefully creates ball' do
     visit '/balls/new'
     within "#new_ball" do
