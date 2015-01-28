@@ -39,6 +39,8 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'database_cleaner'
   gem 'thin'
+  gem 'watir-webdriver'
+  gem 'selenium-webdriver'
 end
 
 # Use ActiveModel has_secure_password
