@@ -1,0 +1,11 @@
+language: ruby
+rvm:
+  - 2.1.2
+env:
+  - CI_REPORTS=shippable/testresults COVERAGE_REPORTS=shippable/codecoverage
+# ensure the test output and coverage dirs are created
+before_install:
+  - rvm rvmrc trust .
+# write the rspec tests to the output dir
+script:
+  - rspec
