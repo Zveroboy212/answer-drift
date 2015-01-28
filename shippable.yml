@@ -12,3 +12,5 @@ before_script:
   - RAILS_ENV=test rake db:migrate
 script:
   - rspec
+addons:
+   firefox: "21.0"
