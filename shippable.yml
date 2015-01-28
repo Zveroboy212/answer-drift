@@ -1,6 +1,11 @@
 language: ruby
 rvm:
   - 2.1.2
+addons:
+  firefox: "21.0"
+  selenium: "2.44"
+services:
+  - selenium
 env:
   - CI_REPORTS=shippable/testresults COVERAGE_REPORTS=shippable/codecoverage
 # ensure the test output and coverage dirs are created
@@ -12,5 +17,3 @@ before_script:
   - RAILS_ENV=test rake db:migrate
 script:
   - rspec
-addons:
-   firefox: "21.0"
