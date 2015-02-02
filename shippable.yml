@@ -21,3 +21,4 @@ script:
   - rspec
 notifications:
   email: false
+cache: true
