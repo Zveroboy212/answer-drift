@@ -1,0 +1,24 @@
+language: ruby
+rvm:
+  - 2.1.2
+addons:
+  firefox: "21.0"
+  selenium: "2.44"
+services:
+  - selenium
+env:
+  - CI_REPORTS=shippable/testresults COVERAGE_REPORTS=shippable/codecoverage
+# ensure the test output and coverage dirs are created
+before_install:
+  - rvm rvmrc trust .
+# write the rspec tests to the output dir
+before_script: 
+  - "export DISPLAY=:99.0"
+  - "/etc/init.d/xvfb start"
+  - RAILS_ENV=test rake db:create
+  - RAILS_ENV=test rake db:migrate
+script:
+  - rspec
+notifications:
+  email: false
+cache: true

@@ -21,11 +21,12 @@ require 'capybara/rails'
 require 'capybara/rspec'
 require 'capybara/poltergeist'
 require 'database_cleaner'
+require 'selenium-webdriver'
 
 Capybara.configure do |config|
   config.automatic_reload = true
   config.default_driver = :rack_test
-  config.javascript_driver = :poltergeist
+  config.javascript_driver = :selenium
   #config.asset_host = "http://localhost:3000"
   config.default_wait_time = 10
 end
