@@ -1,3 +1,3 @@
 # answer-drift
-
-Using for different CI systems
+[![Build Status](http://jenkins.masalitin.info/buildStatus/icon?job=test-ci&build=8)](http://jenkins.masalitin.info/job/test-ci/8/)
+Using for Jenkins
